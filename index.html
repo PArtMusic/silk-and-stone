@@ -3,24 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beware the Alzabo</title>
+    <title>Spinning Joel</title>
     <style>
         body {
             margin: 0;
             background-color: #ADD8E6;
             display: flex;
+            flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             height: 100vh;
         }
         img {
             margin-top: 20px;
+            cursor: pointer;
+            transform-origin: center;
+            transition: transform 0.2s ease;
+        }
+        span {
+            font-size: 24px;
+            font-weight: bold;
+            color: black;
         }
     </style>
 </head>
 <body>
-  L O V E
-    <img src="https://media.tenor.com/ybltK0OLjrAAAAAj/joel-spin.gif" alt="Joel Spinning GIF">
-  D R E A M
+    <span>L O V E</span>
+    <img src="https://media.tenor.com/ybltK0OLjrAAAAAj/joel-spin.gif" alt="Joel Spinning GIF" id="spinningGif">
+    <span>D R E A M</span>
+
+    <script>
+        let rotationAngle = 0;
+        const gif = document.getElementById('spinningGif');
+
+        gif.addEventListener('click', () => {
+            rotationAngle += 90; // Increase rotation angle by 90 degrees
+            gif.style.transform = `rotate(${rotationAngle}deg)`;
+        });
+    </script>
 </body>
 </html>
