@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beware the Alzabo</title>
+    <!-- Import the Quake font from cdnfonts -->
+    <link href="https://fonts.cdnfonts.com/css/quake" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -12,7 +14,6 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            /* Set pixel art GIF as the background */
             background: url('https://i.imgur.com/RlFHr8D.gif') center center fixed;
             background-size: cover;
             color: #000;
@@ -26,10 +27,11 @@
         }
 
         span {
+            font-family: 'Quake', sans-serif !important;
             font-size: 24px;
             font-weight: bold;
             color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Improves readability on the busy background */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
@@ -43,7 +45,7 @@
         const gif = document.getElementById('spinningGif');
 
         gif.addEventListener('click', () => {
-            rotationAngle += 90; // Increase rotation angle by 90 degrees
+            rotationAngle += 90;
             gif.style.transform = `rotate(${rotationAngle}deg)`;
         });
     </script>
